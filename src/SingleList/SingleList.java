@@ -9,7 +9,7 @@ public class SingleList<E> {
         return  size;
 
     }
-    public boolean isEmpty(){
+    public boolean is_Empty(){
 
         return size()==0;
     }
