@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
 
         int[]numbers={1,2,3,4,5};
-        int[]numbers2=new int[5];
+        Arrays2 arr=new Arrays2();
+      /*  int[]numbers2=new int[5];
         System.out.println(Arrays.toString(numbers));
         System.out.println(Arrays.toString(numbers2));
 
@@ -35,17 +36,15 @@ public class Main {
 
         int result= arr.LinearSearch(numbers,svalue:4);
         if (result!=-1)
-            System.out.println("V F "+result);
+            System.out.println("V F A I"+result);
+        else
+            System.out.println("V N F");*/
+
+        int result2= arr.BinarySearch(numbers,0,numbers.length-1,4);
+        if (result2!=-1)
+            System.out.println("V F "+result2);
         else
             System.out.println("V N F ");
-
-        int result= arr.BinarySearch(numbers,findex:0,lindex:numbers.length-1,svalue:4);
-        if (result!=-1)
-            System.out.println("V F "+result);
-        else
-            System.out.println("V N F ");
-
-
 
 
     }
