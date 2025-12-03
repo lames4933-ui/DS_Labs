@@ -31,7 +31,9 @@ public class Main {
         arr.Updata(numbers,index:2,nvalue:3);
         arr.Delete(numbers,index:2);
         arr.ShiftLeft_Delete(numbers,index:2);
-         int result= arr.LinearSearch(numbers,svalue:4);
+        arr.Shiftright_Delete(numbers,index:2);
+
+        int result= arr.LinearSearch(numbers,svalue:4);
         if (result!=-1)
             System.out.println("V F "+result);
         else

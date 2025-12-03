@@ -35,6 +35,14 @@ public class Arrays2 {
         }
         a[a.length-1]=Integer.MIN_VALUE;
     }
+    public void Shiftright_Delete(int[]a,int index){
+
+        for (int i =a.length-1; i >=0; i--)
+        {
+            a[i] = a[i - 1];
+        }
+        a[0]=Integer.MIN_VALUE;
+    }
     public int LinearSearch(int[]a,int svalue){
         for (int i=0;i<a.length;i++){
             if (svalue==a[i])
