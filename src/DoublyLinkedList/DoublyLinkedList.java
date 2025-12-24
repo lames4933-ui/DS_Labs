@@ -12,6 +12,18 @@ public class DoublyLinkedList<E> {
         header.setNext(tailer);
     }
 
+    private void addBetween(Node<E>left, E data,Node<E>right){
+        Node<E>newNode=new Node(left,data,right);
+        left.setNext(newNode);
+        right.setNext(newNode);
+        size++;
+    }
+    public void addFirst(E data){
+        addBetween(header,data,header.getNext());
+    }
+    public void addLast(E data){
+        addBetween(tailer.getPrev(),data,tailer);
+    }
 
 
      class Node<E>{
