@@ -89,7 +89,29 @@ public class SinglyLinkedList<E> {
     }
 
 
-
+    public void addAtpoition(E data,int position){
+        if (position <= 0 || position > size + 1){
+            throw new IllegalArgumentException("Invalid position");
+        }
+        if (position==1){
+            addFirst(data);
+            return;
+        }
+        else {
+            Node<E>newNode=new Node(data,null);
+            Node<E>temp=head;
+            int count=1;
+            while (count<position-1){
+                temp=temp.getNext();
+                count++;
+            }
+            newNode.setNext(temp.getNext());
+            temp.setNext(newNode);
+            if (temp.getNext()==null){
+                tail=newNode;
+            }
+        }
+    }
 
     class Node<E>{
 
