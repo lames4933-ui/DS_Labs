@@ -1,5 +1,7 @@
 package DoublyLinkedList;
 
+import SingleList.SinglyLinkedList;
+
 public class DoublyLinkedList<E> {
 
     private Node<E> header;
@@ -24,7 +26,7 @@ public class DoublyLinkedList<E> {
     private void addBetween(Node<E>left, E data,Node<E>right){
         Node<E>newNode=new Node(left,data,right);
         left.setNext(newNode);
-        right.setNext(newNode);
+        right.setPrev(newNode);
         size++;
     }
     public void addFirst(E data){
@@ -52,13 +54,24 @@ public class DoublyLinkedList<E> {
         size--;
         return delete;
     }
-    public E removeFirst(E data){
+    public E removeFirst(){
         return remove(header.getNext());
     }
-    public E removeLast(E data){
+    public E removeLast(){
         return remove(tailer.getPrev());
     }
-
+    public void display(){
+    if (is_Empty()){
+        System.out.println(" null ");
+    return;}
+    Node<E>temp = header.getNext();
+        System.out.print(" null<----Header <-----> ");
+        while (temp.getNext() != tailer) {
+            System.out.print(temp.getData() + " <-----> ");
+            temp = temp.getNext();
+        }
+        System.out.println(" Tailer----->null ");
+    }
 
      class Node<E>{
          private Node<E> prev;
