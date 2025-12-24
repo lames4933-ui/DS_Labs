@@ -12,6 +12,15 @@ public class DoublyLinkedList<E> {
         header.setNext(tailer);
     }
 
+    public int size() {
+        return size;
+
+    }
+
+    public boolean is_Empty() {
+
+        return size() == 0;
+    }
     private void addBetween(Node<E>left, E data,Node<E>right){
         Node<E>newNode=new Node(left,data,right);
         left.setNext(newNode);
@@ -24,7 +33,14 @@ public class DoublyLinkedList<E> {
     public void addLast(E data){
         addBetween(tailer.getPrev(),data,tailer);
     }
-
+    public E getFirst(){
+        if (is_Empty())return null;
+        return header.getNext().getData();
+    }
+    public E getLast(){
+        if (is_Empty())return null;
+        return tailer.getPrev().getData();
+    }
 
      class Node<E>{
          private Node<E> prev;
