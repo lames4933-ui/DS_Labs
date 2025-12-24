@@ -42,6 +42,24 @@ public class DoublyLinkedList<E> {
         return tailer.getPrev().getData();
     }
 
+    private E remove(Node<E> deletedNode){
+        if (header.getNext()==tailer)return null;
+        E delete=deletedNode.getData();
+        Node<E> left=deletedNode.getPrev();
+        Node<E> ritgh=deletedNode.getNext();
+        left.setNext((ritgh));
+        ritgh.setPrev(left);
+        size--;
+        return delete;
+    }
+    public E removeFirst(E data){
+        return remove(header.getNext());
+    }
+    public E removeLast(E data){
+        return remove(tailer.getPrev());
+    }
+
+
      class Node<E>{
          private Node<E> prev;
 
