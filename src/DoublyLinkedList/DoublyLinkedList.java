@@ -62,7 +62,7 @@ public class DoublyLinkedList<E> {
     }
     public void display(){
     if (is_Empty()){
-        System.out.println(" null ");
+        System.out.println(" null   ");
     return;}
     Node<E>temp = header.getNext();
         System.out.print(" null<----Header <-----> ");
