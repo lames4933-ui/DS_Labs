@@ -67,7 +67,7 @@ public class DoublyLinkedList<E> {
     Node<E>temp = header.getNext();
         System.out.print(" null<----Header <-----> ");
         while (temp.getNext() != tailer) {
-            System.out.print(temp.getData() + " <-----> ");
+            System.out.print(temp.getData() + " <----->  ");
             temp = temp.getNext();
         }
         System.out.println(" Tailer----->null ");
