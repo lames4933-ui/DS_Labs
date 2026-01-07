@@ -1,7 +1,5 @@
 package DoublyLinkedList;
 
-import SingleList.SinglyLinkedList;
-
 public class DoublyLinkedList<E> {
 
     private Node<E> header;
@@ -65,6 +63,18 @@ public class DoublyLinkedList<E> {
         System.out.println(" null   ");
     return;}
     Node<E>temp = header.getNext();
+        System.out.print(" null<----Header <-----> ");
+        while (temp.getNext() != tailer) {
+            System.out.print(temp.getData() + " <----->  ");
+            temp = temp.getNext();
+        }
+        System.out.println(" Tailer----->null ");
+    }
+    public void display2(){
+        if (is_Empty()){
+            System.out.println(" null   ");
+            return;}
+        Node<E>temp = header.getNext();
         System.out.print(" null<----Header <-----> ");
         while (temp.getNext() != tailer) {
             System.out.print(temp.getData() + " <----->  ");

@@ -1,4 +1,4 @@
-package SingleList;
+package SinglyLinkedList;
 
 public class SinglyLinkedList<E> {
     private Node<E> head = null;
@@ -86,6 +86,15 @@ public class SinglyLinkedList<E> {
             temp = temp.getNext();
         }
         System.out.println(" null ");
+    }
+    public void display2(){
+
+
+        Node<E> temp = head;
+        while (temp != null) {
+            System.out.println(temp.getData() );
+            temp = temp.getNext();
+        }
     }
 
 
